@@ -444,3 +444,319 @@ export interface OptLinkStateRef {
    */
   link?: LinkStateFull;
 }
+
+/**
+ * The detailed content of an ODAG request object. If this is a summarization of a request initiated from a navigation point that has a single link, its linkId property will refer to that link. Otherwise, a sub-request will be created for each link in the navigation point and the linkIds of those sub-requests will refer to their respective links. If this is a 'single' or 'singlesub' app gen request and the request has at least reached the 'queued' stage, the generatedApp property will contain the ID of the generated app (note that the generated app may not yet be populated with data or published if the request is not completed). If this request is a 'single' or 'sub-single' app gen request but the data load operation failed, the generateApp property will still contain the ID of the failed app to allow viewing of the ODAG-bound script for diagnostic purposes but the generated apps for failed requests are purged on a regular basis so the app may no longer be available. If this request is a 'single' or 'sub-single' app gen request that was canceled before reaching the 'loading' phase, the generatedApp property will be missing since the generated apps for pre-load phase requests are deleted. If this is a multiple app generation request, the generatedApp property will also be missing.
+ */
+export interface RequestStateFull {
+  /**
+   * The system-assigned ID for an ODAG request.
+   */
+  id: string;
+  /**
+   * A timestamp indicating when a significant event happened.
+   */
+  createdDate: string;
+  /**
+   * A timestamp indicating when a significant event happened.
+   */
+  modifiedDate: string;
+  /**
+   * Condensed state of a Qlik Sense user returned in state of ownable ODAG entities (e.g. ModelGroup, Link and EngineGroup).
+   */
+  modifiedByUserName: {
+    /**
+     *The system-assigned ID for a Qlik user.
+     */
+    id: string;
+    userId: string;
+    userDirectory: string;
+    name: string;
+  };
+  owner: string;
+  /**
+   * The system-assigned ID for a link.
+   */
+  link: string;
+  /**
+   * The system-assigned ID for an app.
+   */
+  selectionApp?: string;
+  /**
+   * The name of an app.
+   */
+  selectionAppName?: string;
+  sheetname?: string;
+  /**
+   * The system-assigned ID for an app.
+   */
+  generatedApp?: string;
+  /**
+   * The name of an app.
+   */
+  generatedAppName?: string;
+  /**
+   * The name of an engine group.
+   */
+  engineGroupName?: string;
+  /**
+   * The ID for an EngineGroup.
+   */
+  engineGroupId?: string;
+  /**
+   * The system-assigned ID for an ODAG request.
+   */
+  parentRequestId?: string;
+  /**
+   * For links that do not use any partitioning fields, a 'single' app generation request is created. However, for apps that designate a set of partitioning fields and the user selects multiple values for any of those partitioning fields, then the ODAG service uses a separate, 'singlesub' app generation request to generate a separate app for each of the partition field value combinations chosen in the selection app and tracks the queuing and data load phase of each of those sub-apps separately. Note that 'singlesub' requests share the same link ID of their spawning 'multi' parent request.
+   */
+  kind: string;
+  /**
+   * The current state of an ODAG request.
+   */
+  state: string;
+  /**
+   * The system-assigned ID for an app.
+   */
+  templateApp: string;
+  /**
+   * The name of an app.
+   */
+  templateAppName?: string;
+  /**
+   * An object that describes the state of a generated app's data load operation. In request objects that include this object as an optional property, the property will be missing for 'multiple' app gen requests (see their sub-requests for their data load information) or for 'single' and 'singlesub' requests that have not yet reached their 'loading' phase.
+   */
+  loadState?: RequestLoadInfo;
+  /**
+   * The value of the Link's appRetentionTime property at the time the app was generated (0 means no auto-purge).
+   */
+  timeToLive?: number;
+  /**
+   * The remaining time in minutes this request will be retained (0 means kept forever).
+   */
+  retentionTime?: number;
+  /**
+   * A timestamp indicating when a significant event happened.
+   */
+  purgeAfter?: string;
+  /**
+   * The Link's rowEstExpr property setting at the time this request was initiated.
+   */
+  curRowEstExpr?: string;
+  /**
+   * The Link's RowEstRange.lowBound value for the user at the time this request was initiated. format: int32
+   */
+  curRowEstLowBound?: number;
+  /**
+   * The Link's RowEstRange.highBound value for the user at the time this request was initiated. format: int32
+   */
+  curRowEstHighBound?: number;
+  /**
+   * The evaluated value of the Link's rowEstExpr measure expression at the time this request was initiated. format: int32
+   */
+  actualRowEst?: number;
+  /**
+   * A collection of FieldSelectionState objects.
+   */
+  bindSelectionState?: {};
+  /**
+   * A 64-bit hash of the bound field state at the time the request was made. format: int64
+   */
+  bindingStateHash?: number;
+  /**
+   * A JSON-encoded representation of selected field values at the time the request was made.
+   */
+  selectionState?: {};
+  /**
+   * A 64-bit hash of the selected field values at the time the request was made. format: int64
+   */
+  selectionStateHash?: number;
+  /**
+   * A list of validation errors or warnings.
+   */
+  validation?: string[];
+  /**
+   * This property only exists for 'multiple' app gen requests. It contains an array of the IDs of sub-requests that were spawned from this multi-request.
+   */
+  subRequests?: RequestId[];
+  /**
+   * The name of the stream where the generated app will be published.
+   */
+  publishToStreamName?: string;
+}
+
+/**
+ * The system-assigned ID for an ODAG request.
+ */
+export type RequestId = string;
+
+export interface RequestLoadInfo {
+  /**
+   * The name of the engine host that is performed the data load operation for this request. This property will be missing in 'multiple' app gen requests (see the 'loadHost' field of their sub-requests) and will be an empty string on a 'single' or 'singlesub' request that has not yet reached the 'loading' phase.
+   */
+  loadHost: string;
+  /**
+   * A timestamp indicating when a significant event happened.
+   */
+  startedAt: string;
+  /**
+   * A timestamp indicating when a significant event happened.
+   */
+  finishedAt?: string;
+  /**
+   * The completion status of a completed Request.
+   */
+  status?: string;
+  messages?: RequestLoadInfo_messages;
+}
+
+export interface RequestLoadInfo_messages {
+  /**
+   *  The path to the reload log file.
+   */
+  logfilepath?: string;
+  /**
+   * Optional progress messages during the load process as returned by the QIX api.
+   */
+  progressData?: ProgressDataInfo;
+}
+
+/**
+ * Optional progress messages during the load process as returned by the QIX api.
+ */
+export interface ProgressDataInfo {
+  /**
+   * An array of error messages during the load process.
+   */
+  errorData?: {
+    /**
+     * Detailed information about the error message.
+     */
+    qErrorString?: string;
+    /**
+     * Line termination characters.
+     */
+    qLineEnd?: string;
+    /**
+     * Script statement where the error occurs.
+     */
+    qLine?: string;
+    /**
+     * Type of the error messages.
+     */
+    qErrorDataCode?: string;
+  }[];
+  /**
+   * An array of persistent progress messages during the load process.
+   */
+  persistentProgressMessages?: {
+    /**
+     * Code number to the corresponding localized message string.
+     */
+    qMessageCode?: string;
+    /**
+     * Parameters to be inserted in the localized message string.
+     */
+    qMessageParameters?: string;
+  }[];
+}
+
+export interface RequestModifyPayload {
+  /**
+   * The action to perform on the request. One of:
+   *
+   * 1. cancel a pending or in-flight request (or cancel the sub-requests of a multiple app gen request that have not yet completed);
+   *
+   * 2. pause a request that is not started (i.e. still in the queued state);
+   *
+   * 3. resume a paused request;
+   *
+   * 4. acknowledge a prior cancelation or
+   *
+   * 5. acknowledge the failure of a prior, failed request.
+   */
+  action: string;
+  /**
+   * An optional flag that will delete the generated app following a cancel (with autoAck), ackcancel or ackfailure action. This optional parameter is only considered in the cases where 'action' parameter is either 'cancel' (with auto-ack=true), 'ackcancel' or 'ackfailure'.
+   */
+  delGenApp?: boolean;
+  /**
+   * An optional flag that can be supplied with the 'cancel' action that, when true, will automatically transition a canceled request to the 'canceled-ack' state following its actual cancelation. Without a 'true' setting for this parameter, the 'cancel' action will transition the state to 'canceled' following actual cancelation of processing (note that there may be a delay in the interim where the state is 'canceling'). Without passing autoAck = true, a subsequent 'ackcancel' action must be invoked using this endpoint to acknowledge the cancelation.
+   */
+  autoAck?: string;
+  /**
+   * An optional flag that can be supplied with the 'cancel' action that, when true, will not return an error if the request went to succeeded state while the request was being sent.
+   */
+  ignoreSucceeded?: string;
+}
+
+/**
+ * Payload to send when creating an ODAG Request. selectionApp is the ID of the selection app from which the request is being made. bindSelectionState is the current selection state in the selection app at the time the request is made (this can be limited to the set of fields corresponding to the selectAppParamName properties in the link's bindings to save bandwidth on sending this request.
+ */
+export interface RequestCreatePayload {
+  /**
+   * The system-assigned ID for an app.
+   */
+  selectionApp: string;
+  /**
+   * The name of the sheet from which the request is being made.
+   */
+  sheetName?: string;
+  /**
+   * An opaque handle to a client-side object that contains the reference to the link being used.
+   */
+  clientContextHandle?: string;
+  /**
+   * The current row estimate value calculated by the link's rowEstExpr property in the context of the selection app. format: int32
+   */
+  actualRowEst: number;
+  /**
+   * A collection of FieldSelectionState objects.
+   */
+  bindSelectionState: {};
+  /**
+   * A collection of FieldSelectionState objects.
+   */
+  selectionState?: {};
+}
+
+export interface LinkRequestsQueryParams {
+  /**
+   * An optional reference to the ID of a selection app.
+   */
+  selectionAppId?: string;
+  /**
+   * An opaque handle to a client-side object that contains the reference to the link being used.
+   */
+  clientContextHandle?: string;
+  /**
+   * The name (or ID) of the sheet to filter qualifying ODAG requests.
+   */
+  selectionAppSheet?: string;
+  /**
+   * Pass 'true' if only pending requests should be returned.
+   */
+  pending?: boolean;
+}
+
+/**
+ * 	JSON payload to send to RequestReloadApp
+ */
+export interface ReloadAppPayload {
+  /**
+   * Determines if the request needs to be copied along with the generated app or not.
+   */
+  copyRequest?: boolean;
+  /**
+   * The current row estimate value calculated by the link's rowEstExpr property in the context of the selection app. format: int32
+   */
+  actualRowEst?: number;
+  /**
+   * A collection of FieldSelectionState objects.
+   */
+  bindSelectionState?: {};
+  /**
+   * A collection of FieldSelectionState objects.
+   */
+  selectionState?: {};
+}
