@@ -8,7 +8,7 @@ Node.js/browser package to interact with Qlik Sense ODAG API (QSEoW)
 
 ## Installation
 
-`npm install qlik-repo-api`
+`npm install qlik-odag-api`
 
 > **Note**
 > Node version >= 16.0.0
