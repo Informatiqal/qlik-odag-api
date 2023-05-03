@@ -10,8 +10,9 @@
         "allowSyntheticDefaultImports": true
     },
     "include": [
-        "src/**/*"
-, "rollup.config.js"    ],
+        "src/**/*",
+        "rollup.config.js"
+    ],
     "exclude": [
         "node_modules"
     ]

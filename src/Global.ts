@@ -14,7 +14,7 @@ export class About {
   /**
    * Gets the service name, version, configuration and enabled status of the OdagService
    */
-  public async about() {
+  public async about(): Promise<AboutResponse> {
     return await this.#restClient
       .Get<AboutResponse>(`about`)
       .then((res) => res.data);
@@ -23,7 +23,7 @@ export class About {
   /**
    * Returns true if the ODAG Service is available for the caller.
    */
-  public async isODAGAvailable() {
+  public async isODAGAvailable(): Promise<IsAvailableResponse> {
     return await this.#restClient
       .Get<IsAvailableResponse>(`isodagavailable`)
       .then((res) => res.data);
@@ -32,9 +32,9 @@ export class About {
   /**
    * Notifies the OdagService that global settings have changed.
    */
-  public async checkSettings() {
+  public async checkSettings(): Promise<boolean> {
     return await this.#restClient
       .Post<CheckSettingsResponse>(`checksettings`, {})
-      .then((res) => res.data);
+      .then((res) => res.data.status);
   }
 }

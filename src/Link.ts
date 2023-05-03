@@ -12,6 +12,7 @@ import { Request } from "./Request";
 
 export class Link {
   #id: string;
+  #basePath: string;
   #restClient: QlikGenericRestClient;
   details: LinkStateFull;
   constructor(
@@ -26,14 +27,14 @@ export class Link {
   async init() {
     if (!this.details) {
       this.details = await this.#restClient
-        .Get<LinkStateFull>(`links/${this.#id}`)
+        .Get<LinkStateFull>(`${this.#basePath}/links/${this.#id}`)
         .then((res) => res.data);
     }
   }
 
   public async update(arg: LinkModifyPayload) {
     return await this.#restClient
-      .Put<LinkStateChangeResponse>(`links/${this.details.id}`, arg)
+      .Put<LinkStateChangeResponse>(`${this.#basePath}/links/${this.details.id}`, arg)
       .then((res) => res.data)
       .then((data) => (this.details = data.objectDef));
   }
@@ -44,7 +45,7 @@ export class Link {
    * Return a list of ODAG requests for a specific link and that optionally match a set of conditions defined by a combination of additional optional parameters.
    */
   public async getRequests(arg?: LinkRequestsQueryParams): Promise<Request[]> {
-    const urlBuild = new URLBuild(`links/${this.details.id}/requests`);
+    const urlBuild = new URLBuild(`${this.#basePath}/links/${this.details.id}/requests`);
 
     if (arg) {
       urlBuild.addParam("clientContextHandle", arg.clientContextHandle);
@@ -79,7 +80,7 @@ export class Link {
       );
 
     return await this.#restClient
-      .Put<RequestStateFull>(`links/${this.details.id}/requests`, arg)
+      .Put<RequestStateFull>(`${this.#basePath}/links/${this.details.id}/requests`, arg)
       .then((res) => res.data)
       .then((data) => new Request(this.#restClient, data.id, data));
   }

@@ -12,14 +12,15 @@ export namespace QlikODAGApi {
      */
     private genericClient: QlikGenericRestClient;
 
-    public about: About;
+    public global: About;
     public links: Links;
     public requests: Requests;
 
     constructor(private config: IConfig) {
-      this.genericClient = new QlikGenericRestClient(config);
+      const basePath: string = config.port == 9098 ? "v1" : "api/odag/v1";
+      this.genericClient = new QlikGenericRestClient(config, basePath);
 
-      this.about = new About(this.genericClient);
+      this.global = new About(this.genericClient);
       this.links = new Links(this.genericClient);
       this.requests = new Requests(this.genericClient);
     }

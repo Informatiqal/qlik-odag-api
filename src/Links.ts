@@ -146,7 +146,9 @@ export class Links {
         `links.selAppLinkUsages: "linkUsagePayload" parameter is required`
       );
 
-    const urlBuild = new URLBuild(`links/${arg.selAppId}/selAppLinkUsages`);
+    const urlBuild = new URLBuild(
+      `links/${arg.selAppId}/selAppLinkUsages`
+    );
 
     urlBuild.addParam("type", arg.type);
     urlBuild.addParam("includeCharts", arg.includeCharts);

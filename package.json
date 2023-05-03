@@ -42,7 +42,8 @@
     "CHANGELOG.md",
     "!tsconfig.json",
     "!tsconfig.test.json",
-    "!Notes.md"
+    "!Notes.md",
+    "!renovate.json"
   ],
   "repository": {
     "type": "git",
@@ -54,26 +55,23 @@
   },
   "homepage": "https://github.com/informatiqal/qlik-odag-api#readme",
   "dependencies": {
-    "qlik-rest-api": "^1.7.4"
+    "qlik-rest-api": "^1.7.5"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
-    "@types/chai": "^4.3.4",
-    "@types/mocha": "^10.0.1",
     "@types/node": "^18.16.1",
-    "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "esm": "^3.2.25",
-    "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "rollup": "^3.21.0",
     "rollup-plugin-delete": "^2.0.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.0",
     "typedoc": "^0.24.6",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
   }
 }
