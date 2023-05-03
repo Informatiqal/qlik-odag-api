@@ -20,7 +20,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">LinkProperties</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:236</li></ul></aside>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L248">types/interfaces.ts:248</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -52,103 +52,105 @@
 <div class="tsd-comment tsd-typography"><p>Sets the default method by which the newly generated app is displayed when opened. The default is &#39;Tab&#39; to open a new tab in the same browser. Note that not all devices permit both methods so the chosen behavior may not apply if it is not supported on the user&#39;s device or browser.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:273</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L288">types/interfaces.ts:288</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="appRetentionTime" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>app<wbr/>Retention<wbr/>Time</span><a href="#appRetentionTime" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">app<wbr/>Retention<wbr/>Time</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropAppRetentionTime.html" class="tsd-signature-type tsd-kind-interface">LinkPropAppRetentionTime</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>A string that defines the length of time that a generated app should be allowed to exist before it is automatically purged. The format must be in either ISO 8601 duration format or the text &#39;unlimited&#39;.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:261</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L276">types/interfaces.ts:276</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="cacheExpiry" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>cache<wbr/>Expiry</span><a href="#cacheExpiry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">cache<wbr/>Expiry</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropCacheExpiry.html" class="tsd-signature-type tsd-kind-interface">LinkPropCacheExpiry</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The duration of time, in seconds, starting from the time at which a previously produced app that was generated using the same Link and an identical selection state, for which the prior app can be used as a substitute for a freshly generated app. The lack of this property means that no prior generation of the app is suitable as a replacement and a new app will always be generated (unless the app generation limit has been reached and the limit policy is set to &#39;restrict&#39;). [PREMIUM-VERSION-ONLY]</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:277</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L292">types/interfaces.ts:292</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="disable" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>disable</span><a href="#disable" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">disable</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropDisable.html" class="tsd-signature-type tsd-kind-interface">LinkPropDisable</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Set to &#39;true&#39; to temporarily disable the use of this Link to generate apps.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:285</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L300">types/interfaces.ts:300</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="engineGroup" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>engine<wbr/>Group</span><a href="#engineGroup" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">engine<wbr/>Group</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropEngineGroup.html" class="tsd-signature-type tsd-kind-interface">LinkPropEngineGroup</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The name of the Engine Group to queue all ODAG Requests to when this Link is traversed. [PREMIUM-VERSION-ONLY]</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:245</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L260">types/interfaces.ts:260</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ephemeral" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>ephemeral</span><a href="#ephemeral" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ephemeral</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropEphemeral.html" class="tsd-signature-type tsd-kind-interface">LinkPropEphemeral</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Set to &#39;true&#39; to indicate that all apps generated using this link should be ephemeral and never stored to disk. [TODO! Requires session-app support in the Sense client and hub]. Note that if this property is &#39;true&#39;, the LinkPropAppRetentionTime property has no effect since the generated app will last only for the duration of the user&#39;s current session with the generated app (i.e. the generated app is never saved). [PREMIUM-VERSION-ONLY]</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:281</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L296">types/interfaces.ts:296</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="genAppLimit" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>gen<wbr/>App<wbr/>Limit</span><a href="#genAppLimit" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">gen<wbr/>App<wbr/>Limit</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropGenAppLimit.html" class="tsd-signature-type tsd-kind-interface">LinkPropGenAppLimit</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The limit to the number of apps generated using this specific Link that can exist, and still not deleted, before the policy defined by the appLimitPolicy property is applied. If no appLimitPolicy is defined, the &#39;Restrict&#39; policy is assumed. If there is no value for this property applicable to the current user, there is no limit to the number of apps that can be generated from this link for the user. The count of the current number of apps is based on just those apps generated by the current user (and still in existence) for this specific link. The minimum value for this property is 1.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:253</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L268">types/interfaces.ts:268</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="genAppName" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>gen<wbr/>App<wbr/>Name</span><a href="#genAppName" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">gen<wbr/>App<wbr/>Name</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropGenAppName.html" class="tsd-signature-type tsd-kind-interface">LinkPropGenAppName</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>An object that defines how to compute the name to use for the generated app.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:249</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L264">types/interfaces.ts:264</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="hide" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>hide</span><a href="#hide" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">hide</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropHide.html" class="tsd-signature-type tsd-kind-interface">LinkPropHide</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Set to &#39;true&#39; to temporarily hide access to all usages of this Link. Note! It is the responsibility of the clients to consult this setting on a per-user, per-use case basis to actually hide the links and their client usages).</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:289</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L304">types/interfaces.ts:304</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="limitPolicy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>limit<wbr/>Policy</span><a href="#limitPolicy" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">limit<wbr/>Policy</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropLimitPolicy.html" class="tsd-signature-type tsd-kind-interface">LinkPropLimitPolicy</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The action to take when the limit to the maximum number of generated apps is reached.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:257</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L272">types/interfaces.ts:272</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="menuLabel" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>menu<wbr/>Label</span><a href="#menuLabel" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">menu<wbr/>Label</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropMenuLabel.html" class="tsd-signature-type tsd-kind-interface">LinkPropMenuLabel</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>The default label to use for this Link in the context of the selection app&#39;s ODAG navigation menu.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:241</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L256">types/interfaces.ts:256</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="publishTo" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>publish<wbr/>To</span><a href="#publishTo" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">publish<wbr/>To</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropPublishTo.html" class="tsd-signature-type tsd-kind-interface">LinkPropPublishTo</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>A stream in which to publish the generated app following successful app generation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:265</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L280">types/interfaces.ts:280</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="reloadSchedule" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>reload<wbr/>Schedule</span><a href="#reloadSchedule" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">reload<wbr/>Schedule</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropReloadSchedule.html" class="tsd-signature-type tsd-kind-interface">LinkPropReloadSchedule</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>A text string defining the reload schedule for an automatically-created scheduler task for apps generated app using this link. [TODO! Need to define the format for this string (e.g. crontab?)] The lack of a value for this property means no scheduler task will be created for the generated app. [PREMIUM-VERSION-ONLY]</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:269</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L284">types/interfaces.ts:284</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="rowEstRange" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>row<wbr/>Est<wbr/>Range</span><a href="#rowEstRange" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">row<wbr/>Est<wbr/>Range</span><span class="tsd-signature-symbol">:</span> <a href="LinkPropRowEstRange.html" class="tsd-signature-type tsd-kind-interface">LinkPropRowEstRange</a><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">row<wbr/>Est<wbr/>Range</span><span class="tsd-signature-symbol">:</span> <a href="LinkPropRowEstRange.html" class="tsd-signature-type tsd-kind-interface">LinkPropRowEstRange</a><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>A link property that defines a value range that the evaluated value of the row estimate measure must fall within in order to allow submissions of a request for the link.</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:237</li></ul></aside></section>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L252">types/interfaces.ts:252</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="targetSheet" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>target<wbr/>Sheet</span><a href="#targetSheet" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">target<wbr/>Sheet</span><span class="tsd-signature-symbol">?:</span> <a href="LinkPropTargetSheet.html" class="tsd-signature-type tsd-kind-interface">LinkPropTargetSheet</a><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>An optional property that a Link creator can specify to cause the client to navigate to a specific sheet in the generated app when opening the generated app from the selection app&#39;s nav point panel.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in types/interfaces.ts:293</li></ul></aside></section></section></div>
+<li>Defined in <a href="https://github.com/informatiqal/qlik-odag-api/blob/20313ed/src/types/interfaces.ts#L308">types/interfaces.ts:308</a></li></ul></aside></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -193,6 +195,8 @@
 <li><a href="../classes/About.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>About</span></a></li>
 <li><a href="../classes/Link.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Link</span></a></li>
 <li><a href="../classes/Links.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Links</span></a></li>
+<li><a href="../classes/Request.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Request</span></a></li>
+<li><a href="../classes/Requests.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg><span>Requests</span></a></li>
 <li><a href="AboutResponse.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-256-path"></rect><path d="M9.51 16V15.016H11.298V8.224H9.51V7.24H14.19V8.224H12.402V15.016H14.19V16H9.51Z" fill="var(--color-text)" id="icon-256-text"></path></svg><span>About<wbr/>Response</span></a></li>
 <li><a href="AppStateCondensed.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>App<wbr/>State<wbr/>Condensed</span></a></li>
 <li><a href="CheckSettingsResponse.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Check<wbr/>Settings<wbr/>Response</span></a></li>
@@ -216,10 +220,19 @@
 <li><a href="LinkPropRowEstRange.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>Prop<wbr/>Row<wbr/>Est<wbr/>Range</span></a></li>
 <li><a href="LinkPropTargetSheet.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>Prop<wbr/>Target<wbr/>Sheet</span></a></li>
 <li><a href="LinkProperties.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>Properties</span></a></li>
+<li><a href="LinkRequestsQueryParams.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>Requests<wbr/>Query<wbr/>Params</span></a></li>
 <li><a href="LinkStateChangeResponse.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>State<wbr/>Change<wbr/>Response</span></a></li>
 <li><a href="LinkStateFull.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Link<wbr/>State<wbr/>Full</span></a></li>
 <li><a href="OdagConfigResponse.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Odag<wbr/>Config<wbr/>Response</span></a></li>
 <li><a href="OptLinkStateRef.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Opt<wbr/>Link<wbr/>State<wbr/>Ref</span></a></li>
+<li><a href="ProgressDataInfo.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Progress<wbr/>Data<wbr/>Info</span></a></li>
+<li><a href="ReloadAppPayload.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Reload<wbr/>App<wbr/>Payload</span></a></li>
+<li><a href="RequestCreatePayload.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Create<wbr/>Payload</span></a></li>
+<li><a href="RequestLoadInfo.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Load<wbr/>Info</span></a></li>
+<li><a href="RequestLoadInfo_messages.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Load<wbr/>Info_<wbr/>messages</span></a></li>
+<li><a href="RequestModifyPayload.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>Modify<wbr/>Payload</span></a></li>
+<li><a href="RequestStateFull.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>Request<wbr/>State<wbr/>Full</span></a></li>
 <li><a href="UserStateCondensed.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-256-path"></use><use href="#icon-256-text"></use></svg><span>User<wbr/>State<wbr/>Condensed</span></a></li>
-<li><a href="../types/LinkUsageContext.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-type-alias)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg><span>Link<wbr/>Usage<wbr/>Context</span></a></li></ul></nav></div></div></div>
+<li><a href="../types/LinkUsageContext.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-type-alias)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg><span>Link<wbr/>Usage<wbr/>Context</span></a></li>
+<li><a href="../types/RequestId.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>Request<wbr/>Id</span></a></li></ul></nav></div></div></div>
 <div class="overlay"></div></body></html>
