@@ -1,6 +1,6 @@
 {
   "name": "qlik-odag-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interact with Qlik Sense ODAG API (QSEoW)",
   "author": {
     "email": "info@informatiqal.com",
@@ -53,23 +53,21 @@
     "url": "https://github.com/informatiqal/qlik-odag-api/issues"
   },
   "homepage": "https://github.com/informatiqal/qlik-odag-api#readme",
-  "dependencies": {
-    "qlik-rest-api": "^1.7.5"
-  },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-typescript": "^11.1.0",
-    "@types/node": "^18.16.1",
-    "dotenv": "^16.0.3",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.5.0",
+    "dotenv": "^16.4.5",
     "esm": "^3.2.25",
-    "nyc": "^15.1.0",
-    "rollup": "^3.21.0",
+    "nyc": "^17.0.0",
+    "qlik-rest-api": "^1.8.4",
+    "rollup": "^4.21.0",
     "rollup-plugin-delete": "^2.0.0",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.5.0",
-    "typedoc": "^0.24.6",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.7.0",
+    "typedoc": "^0.26.6",
     "typescript": "^5.0.4",
     "vitest": "^0.30.1"
   }
